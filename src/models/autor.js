@@ -63,6 +63,10 @@ class Autor {
     const resultado = await this.criar();
     return resultado;
   }
+
+  static async getLivroPorAutor(autorId) {
+    return db.select('*').from('livros').where({ autor_id: autorId });
+  }
 }
 
 export default Autor;
