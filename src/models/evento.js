@@ -1,6 +1,6 @@
-/* eslint-disable class-methods-use-this */
 /* eslint-disable camelcase */
-// import db from '../db/dbconfig.js';
+/* eslint-disable class-methods-use-this */
+import db from '../db/dbconfig.js';
 
 class Evento {
   constructor({
@@ -19,6 +19,10 @@ class Evento {
     this.autor_id = autor_id;
     this.created_at = created_at || new Date().toISOString();
     this.updated_at = updated_at || new Date().toISOString();
+  }
+
+  static async getEventos() {
+    return db.select('*').from('eventos');
   }
 }
 

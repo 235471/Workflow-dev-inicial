@@ -59,6 +59,14 @@ export async function seed(knex) {
       autor_id: 3,
     },
   ]);
+  await knex('eventos').insert([
+    {
+      nome: 'Evento PSQL',
+      descricao: 'Autor de livros do postgres',
+      data: '2025-02-10',
+      autor_id: 1,
+    },
+  ]);
 }
 
 // npx knex --knexfile=./src/db/knexfile.js seed:make livraria
