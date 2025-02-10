@@ -1,5 +1,5 @@
-/* eslint-disable class-methods-use-this */
 /* eslint-disable camelcase */
+/* eslint-disable class-methods-use-this */
 import db from '../db/dbconfig.js';
 
 class Evento {
